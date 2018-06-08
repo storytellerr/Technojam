@@ -1,0 +1,125 @@
+img {
+    height: 100%;
+    margin: 1%;
+}
+
+.header {
+    color: indianred;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.backgroundGradient {
+    overflow: hidden;
+    width: 100%;
+    max-height: 600px;
+    background: #5700d1;
+    background: linear-gradient(135deg, #5700d1 0, #b500d1 100%);
+}
+
+.h1 {
+    font-family: "Times New Roman", Times, serif;
+    color: #fff;
+    font-size: 30px;
+}
+
+.OnCanvas {
+    height: 100%;
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+}
+
+.positionNotFixwd {
+    position: inherit;
+}
+
+@media screen and (min-width: 600px) {
+    div.onFortyy {
+        font-size: 60px;
+        font-family: "Impact", Charcoal, sans-serif;
+        top: 35%;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+    }
+    div.onFifty {
+        font-size: 35px;
+        top: 50%;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+    }
+    div.social-icons {
+        top: 70%;
+        left: 35%;
+        position: absolute;
+        height: 35px;
+        width: 180px;
+    }
+    div.learn-more {
+        top: 70%;
+        left: 55%;
+        position: absolute;
+        height: 35px;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    div.onFortyy {
+        font-size: 30px;
+        font-family: "Impact", Charcoal, sans-serif;
+        top: 40%;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+    }
+    div.onFifty {
+        font-size: 20px;
+        top: 50%;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+    }
+    div.social-icons {
+        width: 100%;
+        left: 40%;
+        top: 70%;
+        position: absolute;
+        height: 20px;
+    }
+    div.learn-more {
+        width: 150px;
+        top: 80%;
+        left: 35%;
+        position: absolute;
+        height: 35px;
+    }
+}
+
+.onSixty {
+    top: 60%;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.downArrow {
+    width: 150px;
+    background-color: #E8C1F1;
+    width: 200px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+}
