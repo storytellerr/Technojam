@@ -35,35 +35,27 @@ ul {
     color: #fff;
 }
 
-.positionNotFixwd {
-    position: inherit;
-}
-
 @media screen and (min-width: 600px) {
-    div.onFortyy {
+    div.firstLine {
         font-size: 60px;
         font-family: "Impact", Charcoal, sans-serif;
-        top: 35%;
         position: absolute;
         width: 100%;
         text-align: center;
     }
-    div.onFifty {
+    div.secondLine {
         font-size: 35px;
-        top: 50%;
         position: absolute;
         width: 100%;
         text-align: center;
     }
     div.social-icons {
-        top: 70%;
         left: 35%;
         position: absolute;
         height: 35px;
         width: 180px;
     }
     div.learn-more {
-        top: 70%;
         left: 55%;
         position: absolute;
         height: 35px;
@@ -72,17 +64,15 @@ ul {
 }
 
 @media screen and (max-width: 600px) {
-    div.onFortyy {
+    div.firstLine {
         font-size: 30px;
         font-family: "Impact", Charcoal, sans-serif;
-        top: 40%;
         position: absolute;
         width: 100%;
         text-align: center;
     }
-    div.onFifty {
+    div.secondLine {
         font-size: 20px;
-        top: 50%;
         position: absolute;
         width: 100%;
         text-align: center;
@@ -90,13 +80,11 @@ ul {
     div.social-icons {
         width: 100%;
         left: 40%;
-        top: 70%;
         position: absolute;
         height: 20px;
     }
     div.learn-more {
         width: 150px;
-        top: 80%;
         left: 35%;
         position: absolute;
         height: 35px;
@@ -104,7 +92,6 @@ ul {
 }
 
 .onSixty {
-    top: 60%;
     position: absolute;
     width: 100%;
     text-align: center;
@@ -122,4 +109,15 @@ ul {
     font-size: 16px;
     cursor: pointer;
     border-radius: 12px;
+}
+
+.newclass {
+    background: linear-gradient(135deg, #5700d1 0, #b500d1 100%);
+}
+
+.textHover {
+    top: 40%;
+    position: absolute;
+    width: 100%;
+    text-align: center;
 }

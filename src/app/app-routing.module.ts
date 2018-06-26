@@ -4,9 +4,12 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './auth.guard';
 import { CommunityComponent } from './community/community.component';
 
+
+
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'community', component: CommunityComponent, canActivate: [AuthGuard] },
+  
   {
     path: '',
     redirectTo: '/',

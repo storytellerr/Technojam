@@ -1,96 +1,49 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/platform-browser';
+
+
+declare const window: any;
+
 
 @Component({
   selector: 'app-top-navigation',
   templateUrl: './top-navigation.component.html',
   styleUrls: ['./top-navigation.component.scss']
 })
+
 export class TopNavigationComponent implements OnInit {
+isNavbarCollapsed = true; 
 
- isNavbarCollapsed = true;
-//   myStyle: object = {};
-//   myParams: object = {};
-//   width: number = 300;
-//   height: number =300;
 
-  constructor() { }
+  constructor() {
+     
+   }
 
+@HostListener("window:scroll", [])
+  onWindowScroll() {
+
+    const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (number < 500) {
+       let body = document.getElementsByClassName('navbar navbar-expand-md')[0];
+      body.classList.remove("newclass");
+      console.log('You are less than 500px from the top to bottom');
+    } else if (number > 500) {
+       let body = document.getElementsByClassName('navbar navbar-expand-md')[0];
+      body.classList.add('newclass'); 
+      console.log('You are 500px from the top to bottom');
+    }
+  }
   ngOnInit() {
-//  consoleText(['we are a community', 'We love to code', 'Made with Love.'], 'text',['#BD6983','tomato','lightblue']);
+  
+  }
+  login(){
 
-    // this.myStyle = {
-
-    //     'width': '100',
-    //     'height': '100',
-    //     'z-index': -1,
-    //     'top': 0,
-    //     'left': 0,
-    //     'right': 0,
-    //     'bottom': 0,
-    // };
-
-    // this.myParams = {
-    //     particles: {
-    //         number: {
-    //             value: 150,
-    //         },
-    //         color: {
-    //             value: '#ff0000'
-    //         },
-    //         shape: {
-    //             type: 'triangle',
-    //         },
-    //    }
-    // };
+  }
+  logout(){
 
   }
 
-  }
-// function consoleText(words, id, colors) {
-//  if (colors === undefined) colors = ['#fff'];
-//  var visible = true;
-//  var con = document.getElementById('console');
-//  var letterCount = 1;
-//  var x = 1;
-//  var waiting = false;
-//  var target = document.getElementById(id)
-//  target.setAttribute('style', 'color:' + colors[0])
-//  window.setInterval(function() {
-//
-//  if (letterCount === 0 && waiting === false) {
-//  waiting = true;
-//  target.innerHTML = words[0].substring(0, letterCount)
-//  window.setTimeout(function() {
-//  var usedColor = colors.shift();
-//  colors.push(usedColor);
-//  var usedWord = words.shift();
-//  words.push(usedWord);
-//  x = 1;
-//  target.setAttribute('style', 'color:' + colors[0])
-//  letterCount += x;
-//  waiting = false;
-//  }, 1000)
-//  } else if (letterCount === words[0].length + 1 && waiting === false) {
-//  waiting = true;
-//  window.setTimeout(function() {
-//  x = -1;
-//  letterCount += x;
-//  waiting = false;
-//  }, 1000)
-//  } else if (waiting === false) {
-//  target.innerHTML = words[0].substring(0, letterCount)
-//  letterCount += x;
-//  }
-//  }, 120)
-//  window.setInterval(function() {
-//  if (visible === true) {
-//  con.className = 'console-underscore hidden'
-//  visible = false;
-//
-//  } else {
-//  con.className = 'console-underscore'
-//
-//  visible = true;
-//  }
-//  }, 400)
-// }
+
+}
+
+

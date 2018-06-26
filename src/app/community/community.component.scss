@@ -2,3 +2,108 @@
     padding: 5%;
     padding-top: 10px;
 }
+
+@media screen and (min-width: 600px) {
+    .card {
+        padding: 2%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 100%;
+        border-radius: 5px;
+        min-height: 390px;
+    }
+    .card:hover {
+        box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        padding: 2%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    .card:hover {
+        box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+ul {
+    padding: 0%;
+}
+
+.imgg {
+    border-radius: 50%;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+@media screen and (min-width: 600px) {
+    .thumbnail {
+        display: inline-block;
+        width: 23%;
+        margin: 1%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .thumbnail {
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+.alignRight {
+    margin-left: auto;
+    margin-bottom: 5px;
+}
+
+.redBox {
+    background: #f73b11;
+    margin: 1%;
+    padding: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 5%;
+}
+
+.orangeBox {
+    background: #ed533b;
+    margin: 1%;
+    padding: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 5%;
+}
+
+.blueBox {
+    background: #5cb9fb;
+    margin: 1%;
+    padding: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 5%;
+}
+
+.greenBox {
+    background: #15d035;
+    margin: 1%;
+    padding: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 5%;
+}
+
+.brownBox {
+    background: #a77822;
+    margin: 1%;
+    padding: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 5%;
+}

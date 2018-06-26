@@ -1,11 +1,57 @@
-<app-top-navigation></app-top-navigation>
+<!--<app-top-navigation></app-top-navigation>-->
 <div class="data">
-    <h1>Community</h1>
+    <div class="row">
+        <h1>Community</h1>
+        <div class="alignRight">
+            <div ngbDropdown class="d-inline-block alignRight">
+                <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button class="dropdown-item" (click)="queryData('All')">All</button>
+                    <button class="dropdown-item" (click)="queryData('Web_development')">Web development</button>
+                    <button class="dropdown-item" (click)="queryData('Android_developer')">Android developer</button>
+                    <button class="dropdown-item" (click)="queryData('Ethical_hacking')">Ethical hacking</button>
+                    <button class="dropdown-item" (click)="queryData('Competative_Programming')">Competative Programming</button>
+                    <button class="dropdown-item" (click)="queryData('IOT')">IOT</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    New Change<br>Webmasters and content providers began optimizing websites for search engines in the mid-1990s, as the first search engines were cataloging the early Web. Initially, all webmasters needed only to submit the address of a page, or URL,
-    to the various engines which would send a "spider" to "crawl" that page, extract links to other pages from it, and return information found on the page to be indexed.[5] The process involves a search engine spider downloading a page and storing it
-    on the search engine's own server. A second program, known as an indexer, extracts information about the page, such as the words it contains, where they are located, and any weight for specific words, as well as all links the page contains. All of
-    this information is then placed into a scheduler for crawling at a later date. Website owners recognized the value of a high ranking and visibility in search engine results,[6] creating an opportunity for both white hat and black hat SEO practitioners.
-    According to industry analyst Danny Sullivan, the phrase "search engine optimization" probably came into use in 1997. Sullivan credits Bruce Clay as one of the first people to popularize the term.[7] On May 2, 2007,[8] Jason Gambert attempted to trademark
-    the term SEO by convincing the Trademark Office in Arizona[9] that SEO is a "process" involving manipulation of keywords and not a "marketing service."
+    <ul>
+        <li class="text thumbnail" *ngFor="let item of items | async">
+            <div class="card" (click)="openVerticallyCentered(item.name,item.data,item.image,content)">
+                <img class="imgg" src="{{item.image}}" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>{{item.name}}</b></h4>
+                    <div class="row">
+                        <div [hidden]="!item.Web_development" class="redBox">Web development</div>
+                        <div [hidden]="!item.Android_developer" class="greenBox">Android</div>
+                        <div [hidden]="!item.Ethical_hacking" class="brownBox">Ethical hacking</div>
+                        <div [hidden]="!item.Competative_Programming" class="orangeBox">Competative Programming</div>
+                        <div [hidden]="!item.IOT" class="blueBox">IOT</div>
+
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <ng-template #content let-c="close" let-d="dismiss">
+        <div class="modal-header">
+            <h4 class="modal-title">{{name}}</h4>
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+               <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div>
+                <img src="{{image}}" style="width:30%">
+            </div>
+            <p>{{body}}</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-light" (click)="c('Close click')">Close</button>
+        </div>
+    </ng-template>
+
 </div>
