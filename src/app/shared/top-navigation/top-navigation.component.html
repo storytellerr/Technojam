@@ -1,28 +1,6 @@
 <div class="backgroundGradient">
     <div class="OnCanvas">
-        <nav class="navbar navbar-expand-md navbar-dark positionNotFixwd fixed-top">
-            <span class="navbar-brand mb-0 "><h1>Technojam</h1></span>
-            <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div [ngbCollapse]="isNavbarCollapsed" class="navbar-collapse">
-                <a class="nav-item nav-link active text-white" routerLink="/">
-                    <h5>Home</h5>
-                </a>
-                <a class="nav-item nav-link active text-white" routerLink="/community">
-                    <h5>Community</h5>
-                </a>
-                <a class="nav-item nav-link active text-white" [hidden]="logged_in" (click)='login()'>
-                    <h5>Login</h5>
-                </a>
-                <a class="nav-item nav-link active text-white" [hidden]="!logged_in" (click)='logout()'>
-                    <h5>Logout</h5>
-                </a>
-                <a class="nav-item nav-link active text-white" [hidden]="!logged_in">
-                    <h5>{{name}}</h5>
-                </a>
-            </div>
-        </nav>
+        <app-navigation-menu></app-navigation-menu>
         <div class="textHover row">
             <div class="firstLine"><b>hello this is text one</b></div>
             <!--<div class=""><img src="assets/social-icons/facebook.svg"><img src="assets/social-icons/github.svg"><img src="assets/social-icons/twitter.svg"><img src="assets/social-icons/youtube.svg"></div>
@@ -33,3 +11,4 @@
             <particles [style]="myStyle" [width]="500" [height]="100" [params]="myParams"></particles>
         </div>
     </div>
+</div>

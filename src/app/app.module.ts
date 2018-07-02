@@ -15,6 +15,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { CommonModule } from '@angular/common';
 import { ParticlesModule } from 'angular-particle';
+import { NavigationMenuComponent } from './shared/navigation-menu/navigation-menu.component';
 
 
 
@@ -26,6 +27,7 @@ import { ParticlesModule } from 'angular-particle';
     HomeComponent,
     CommunityComponent,
     TopNavigationComponent,
+    NavigationMenuComponent,
    
   ],
   imports: [

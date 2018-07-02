@@ -12,7 +12,7 @@ declare const window: any;
 })
 
 export class TopNavigationComponent implements OnInit {
-isNavbarCollapsed = true; 
+
 
 
   constructor() {
@@ -25,23 +25,18 @@ isNavbarCollapsed = true;
     const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     if (number < 500) {
        let body = document.getElementsByClassName('navbar navbar-expand-md')[0];
-      body.classList.remove("newclass");
+      body.classList.remove("backgroundMenu");
       console.log('You are less than 500px from the top to bottom');
     } else if (number > 500) {
        let body = document.getElementsByClassName('navbar navbar-expand-md')[0];
-      body.classList.add('newclass'); 
+      body.classList.add('backgroundMenu'); 
       console.log('You are 500px from the top to bottom');
     }
   }
   ngOnInit() {
   
   }
-  login(){
-
-  }
-  logout(){
-
-  }
+  
 
 
 }

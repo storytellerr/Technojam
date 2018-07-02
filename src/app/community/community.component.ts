@@ -14,7 +14,7 @@ import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 })
 
 
-export class CommunityComponent implements OnInit {
+export  CommunityComponent implements OnInit {
 itemDoc: AngularFirestoreCollection<any>;
 items: Observable<any[]>;
 closeResult: string;
@@ -22,6 +22,7 @@ name:String;
 body:String;
 image:string;
 loading:boolean=true;
+jrhbjk
 
   constructor(private afs: AngularFirestore,private modalService: NgbModal) {
     this.itemDoc = this.afs.collection(`Community`);
@@ -40,7 +41,7 @@ loading:boolean=true;
   //     this.items=this.db.list("Community",ref => ref.orderByChild(s).equalTo(true).valueChanges();
   //   }
   // }
-  ngOnInit() {}
+  ngOnInit() {
      openVerticallyCentered(name,body,image,content) {
        this.loading=true;
        this.name=name;
